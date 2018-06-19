@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../main.css">
+		<script src="script.js"></script>
+		<title>Project List</title>
+	</head>
+	<body>
+		<div id="header">
+			<a href="home.html" id="header">James Benton Testing</a>
+		</div>
+		<div id="main">
+			<div id="menuBar">
+				<a href="../adminOnly.html">Admin</a>
+				<a href="homeworkList.html">Homework</a>
+				<a href="projectsList.html" class="active">Projects</a>
+				<a href="remindersList.html">Reminders</a>
+				<a href="groceriesList.html">Groceries</a>
+			</div>
+			<div class="projBack">
+				<div class="list">
+					<div class="listHeader">
+						<h2>Project List</h2>
+					</div>
+					<form name=homeworkList id="homeworkList">
+						<div id="addNew">
+							Project: <input type="text" placeholder="Enter project description" name="assignment">
+							&emsp; <input type="button" onclick="add(this.form)" value="Add"/>
+						</div>
+						<table id="homeworkTable">
+							<tr>
+								<th>Short Term</th>
+							</tr>
+							<tr>
+								<td>Go through blue box in room</td>
+							</tr>
+							<tr>
+								<td>Print files for Matthew Bartell</td>
+							</tr>
+							<tr>
+								<td>Print file for Elise Helms</td>
+							</tr>
+							<tr>
+								<td>Install Marlin on 3D printer</td>
+							</tr>
+							<tr>
+								<td>Look into Octoprint</td>
+							</tr>
+							<tr>
+								<td>Migrate permenant files to new drive</td>
+							</tr>
+							<tr>
+								<td>3D Printed Sunglasses</td>
+							</tr>
+							
+							
+							<tr>
+								<th>Long Term</th>
+							</tr>
+							<tr>
+								<td>Quadcopter</td>
+							</tr>
+							<tr>
+								<td>HTML certification</td>
+							</tr>
+							<tr>
+								<td>Solidworks certification</td>
+							</tr>
+							<tr>
+								<td>Learn C# for Mac</td>
+							</tr>
+							<tr>
+								<td>Finish this website</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

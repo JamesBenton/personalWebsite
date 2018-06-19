@@ -1,0 +1,245 @@
+body {
+	padding: 0;
+	background-color: #f2f2f2;
+	font-family: system-ui;
+	position: relative;
+}
+
+h1 {
+	color: #333333;
+	text-align: left;
+	font-size: 75px;
+	padding-left: 10px;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+#header {
+	position: relative;
+	text-decoration: none;
+	min-height: 100px;
+	color: #333333;
+	text-align: left;
+	font-size: 75px;
+	padding-left: 10px;
+	padding-bottom: 0;
+	border-bottom: 5px solid #333333;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	-webkit-margin-before: 0.67em;
+	-webkit-margin-after: 0.67em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	font-weight: bold;	
+}
+
+#main {
+	position: relative;
+	margin-left: 45px;
+	margin-top: 15px;
+}
+
+#menuBar {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+#menuBar a {
+	color: #f2f2f2;
+	background-color: #333333;
+	min-width: 140px;
+	text-decoration: none;
+	font-family: system-ui;
+	text-align: center;
+	padding: 5px 0px;
+	font-size: 25px;
+	float: left;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+
+#menuBar a.active, button.active {
+	background-color: #800000;
+	color: #f2f2f2
+}
+
+#menuBar a:not(.active):hover, button:not(.active):hover, button:not(.active):focus {
+	background-color: #d2d2d2;
+	color: #333333;
+	outline: 0;
+}
+
+.dropBtn {
+	background-color: #333333;
+    color: #f2f2f2;
+    padding: 5px 15px;
+    min-width: 140px;
+    font-family: system-ui;
+    font-size: 25px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.dropdown-content {
+	display: none;
+    position: absolute;
+    float: left;
+    min-width: 140px;
+    max-width: 200px;
+   	color: #f2f2f2;
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+	margin-bottom: 5px;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.show {
+	display: block;
+}
+
+.content {
+	position: absolute;
+	max-width: 600px;
+	margin: 0;
+	background-color: #fbfbfb;
+	padding: 15px;
+}
+
+.content p, .content a{
+	font-size: 18px;
+	margin: 0px;
+	background-color: #fafafa;
+	padding: 0px;
+}
+
+#projectName {
+	width: 525px;
+	margin-bottom: 20px;
+}
+
+#projectName h1 {
+	font-size: 50px;
+	border-bottom: 2px solid #333333;
+}
+
+form {
+	max-width: 265px;
+
+}
+
+#usernameInput {
+	margin-left: 10px;
+}
+
+#passwordInput {
+	margin-left: 15px;
+}
+
+.loginContent {
+	position: relative;
+}
+
+.hwBack {
+	position: relative;
+	max-width: 725px;
+	background: linear-gradient(#b300c6, #2971e5);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: 15px;
+	border-radius: 10px;
+	padding-bottom: 60px;
+}
+
+.projBack {
+	position: relative;
+	max-width: 725px;
+	background: linear-gradient(orange, red);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: 15px;
+	border-radius: 10px;
+	padding-bottom: 60px;
+}
+
+.list {
+	position: relative;
+	background-color: #f1f1f1;
+	max-height: 100%;
+	margin: 0px 30px;
+	top: 30px;
+	border-radius: 10px;
+}
+
+.listHeader, .listHeader h2{
+	position: relative;
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.listHeader {
+	padding-left: 15px;
+}
+
+table {
+	position: relative;
+	border-collapse: collapse;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+tr {
+	min-width: 625px;
+}
+
+th, td {
+	position: relative;
+	padding: 5px 120px 5px 15px;
+	text-align: left;
+	min-width: 175px;
+	font-size: 17px;
+	background-color: #e1e1e1;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+}
+
+tbody {
+}
+
+th {
+	font-size: 25px;
+	border: none;
+	background-color: #f1f1f1;
+}
+
+#homeworkList {
+	min-width: 650px;
+	padding: 15px 0px;
+}
+
+#homeworkTable {
+	width: 665px;
+}
+
+#addNew {
+	position: relative;
+	width: 605px;
+	background-color: #002a6d;
+	color: white;
+	padding:10px;
+	border-radius: 5px;
+	margin-left: 15px;
+}

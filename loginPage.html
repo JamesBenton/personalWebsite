@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script src="script.js"></script>
+		<title>Admin Page</title>
+	</head>
+	<body>
+		<div id="header">
+			<h1>James Benton Testing</h1>
+		</div>
+		<div id="main">
+			<div id="menuBar">
+				<a href="home.html">Home</a>
+				<div class="dropdown">
+					<button class="dropBtn" onclick="dropMenu()">Projects</button>
+					<div id="projList" class="dropdown-content">
+						<a href="interactiveMenuBar.html">Menu Bar</a>
+						<a href="3dPrinting.html">3D Printing</a>
+					</div>
+				</div>
+				<a href="contact.html">Contact</a>
+				<a href="loginPage.html" class="active">Admin</a>
+			</div>
+			<div class="loginContent">
+				<form name="adminLogin">
+					<label for="userName">Username:</label>
+					<input type="text" placeholder="Enter Username" name="username" required id="usernameInput"/>
+
+					<label for="passW">Password:</label>
+					<input type="password" placeholder="Enter Password" name="password" required id="passwordInput"/>
+					<input type = "button" name = "login" onclick="check(this.form)" value="Login"/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
