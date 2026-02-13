@@ -65,13 +65,14 @@ h1 {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    align-items: flex-start; /* Add this */
     background-color: var(--primary-bg);
     padding: 1rem;
     border-radius: 12px;
     box-shadow: var(--shadow-md);
 }
 
-#menuBar a {
+#menuBar > a {  /* Changed from #menuBar a to only target direct children */
     color: var(--text-primary);
     background-color: var(--primary-bg);
     min-width: 120px;
@@ -86,19 +87,24 @@ h1 {
     transition: all 0.2s ease;
 }
 
-#menuBar a.active, button.active {
+#menuBar > a.active, button.active {
     background-color: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
     box-shadow: var(--shadow-sm);
 }
 
-#menuBar a:not(.active):hover, button:not(.active):hover, button:not(.active):focus {
+#menuBar > a:not(.active):hover, button:not(.active):hover, button:not(.active):focus {
     background-color: var(--secondary-bg);
     border-color: var(--accent-color);
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
     outline: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block; /* Keep this */
 }
 
 .dropBtn {
@@ -116,11 +122,6 @@ h1 {
     transition: all 0.2s ease;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -132,21 +133,37 @@ h1 {
     box-shadow: var(--shadow-lg);
     z-index: 1000;
     margin-top: 0.5rem;
-    overflow: hidden;
     border: 1px solid var(--border-color);
 }
 
 .dropdown-content a {
     display: block;
-    margin: 0;
-    border-radius: 0;
-    border: none;
+    color: var(--text-primary);
+    background-color: var(--primary-bg);
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
     border-bottom: 1px solid var(--border-color);
-    float: none;
+    transition: background-color 0.2s ease;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.dropdown-content a:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .dropdown-content a:last-child {
     border-bottom: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-bg);
+    transform: none; /* Override the transform from parent */
 }
 
 .show {
