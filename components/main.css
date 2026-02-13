@@ -241,3 +241,13 @@ th {
 	border-radius: 5px;
 	margin-left: 15px;
 }
+
+/* Hide body until components are loaded */
+body {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}

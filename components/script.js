@@ -1,8 +1,12 @@
 // Load components when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    loadComponent('header-container', 'components/header.html');
-    loadComponent('menubar-container', 'components/menubar.html').then(() => {
+    Promise.all([
+        loadComponent('header-container', 'components/header.html'),
+        loadComponent('menubar-container', 'components/menubar.html')
+    ]).then(() => {
         setActiveMenuItem();
+        // Show the page after everything loads
+        document.body.classList.add('loaded');
     });
 });
 
