@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Component-Based Website Refactor",
+      "date": "2026-02-13",
+      "category": "Web Development",
+      "content": "Today I refactored my entire site to use reusable components..."
+    }
+  ]
+}

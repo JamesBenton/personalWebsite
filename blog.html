@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="/personalWebsite/">
+        <link rel="stylesheet" type="text/css" href="components/main.css">
+        <script src="components/script.js"></script>
+        <title>Blog - James Benton Testing</title>
+    </head>
+    <body>
+        <div id="header-container"></div>
+        <div id="main">
+            <div id="menubar-container"></div>
+            <div class="content">
+                <h1 style="text-align: left; font-size: 2.5rem; margin-bottom: 2rem;">Blog</h1>
+                <div id="blog-posts"></div>
+            </div>
+        </div>
+        
+        <script>
+            // Load blog posts after page loads
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('blog-posts.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const container = document.getElementById('blog-posts');
+                        
+                        // Reverse to show newest first
+                        data.posts.reverse().forEach(post => {
+                            const article = document.createElement('article');
+                            article.className = 'blog-post';
+                            article.innerHTML = `
+                                <h2 class="blog-title">${post.title}</h2>
+                                <div class="blog-meta">
+                                    <span class="blog-date">${post.date}</span>
+                                    ${post.category ? `<span class="blog-category">${post.category}</span>` : ''}
+                                </div>
+                                <div class="blog-content">${post.content}</div>
+                            `;
+                            container.appendChild(article);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error loading blog posts:', error);
+                        document.getElementById('blog-posts').innerHTML = 
+                            '<p>Unable to load blog posts at this time.</p>';
+                    });
+            });
+        </script>
+    </body>
+</html>
