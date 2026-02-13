@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="../main.css">
-		<script src="../script.js"></script>
-		<title>Admin Page</title>
-	</head>
-	<body>
-		<div id="header">
-			<a href="home.html" id="header">James Benton Testing</a>
-		</div>
-		<div id="main">
-			<div id="menuBar">
-				<a href="../adminOnly.html">Admin</a>
-				<a href="homeworkList.html" class="active">Homework</a>
-				<a href="projectsList.html">Projects</a>
-				<a href="remindersList.html">Reminders</a>
-				<a href="groceriesList.html">Groceries</a>
-			</div>
-			<div class="hwBack">
-				<div class="list">
-					<div class="listHeader">
-						<h2>Homework List</h2>
-					</div>
-					<form name=homeworkList id="homeworkList">
-						<div id="addNew">
-							Assignment: <input type="text" placeholder="Enter assignment" name="assignment">
-							&emsp; Due Date: <input type="date" placeholder="Enter due date" name="dueDate">
-							&emsp; <input type="button" onclick="add(this.form)" value="Add"/>
-						</div>
-						<table id="homeworkTable">
-							<tr>
-								<th>Assignments</th>
-								<th>Due Date</th>
-							</tr>
-							<tr>
-								<td>Go by Scoots</td>
-								<td>May 17</td>
-							</tr>
-							<tr>
-								<td>Clean room</td>
-								<td>May 17</td>
-							</tr>
-							<tr>
-								<td>Return book to Amazon</td>
-								<td>May 17</td>
-							</tr>
-						</table>
-					</form>
-				</div>
-			</div>
-		</div>
-	</body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/components/main.css">
+        <script src="/components/script.js"></script>
+        <title>Homework List</title>
+    </head>
+    <body>
+        <div id="header-container"></div>
+        <div id="main">
+            <div id="menubar-container"></div>
+            <div id="lists-nav">
+                <a href="/lists/projectsList.html">Projects</a>
+                <a href="/lists/remindersList.html">Reminders</a>
+                <a href="/lists/groceriesList.html">Groceries</a>
+                <a href="/lists/homeworkList.html">Homework</a>
+            </div>
+            <div class="hwBack">
+                <div class="list">
+                    <div class="listHeader">
+                        <h2>Homework List</h2>
+                    </div>
+                    <form name="homeworkList" id="homeworkList">
+                        <div id="addNew">
+                            Assignment: <input type="text" placeholder="Enter assignment" name="assignment">
+                            &emsp; Due Date: <input type="date" placeholder="Enter due date" name="dueDate">
+                            &emsp; <input type="button" onclick="add(this.form)" value="Add"/>
+                        </div>
+                        <table id="homeworkTable">
+                            <tr>
+                                <th>Assignments</th>
+                                <th>Due Date</th>
+                            </tr>
+                            <tr>
+                                <td>Go by Scoots</td>
+                                <td>May 17</td>
+                            </tr>
+                            <tr>
+                                <td>Clean room</td>
+                                <td>May 17</td>
+                            </tr>
+                            <tr>
+                                <td>Return book to Amazon</td>
+                                <td>May 17</td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
