@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/components/main.css">
-    <script src="/components/script.js"></script>
+    <base href="/personalWebsite/">        
+    <link rel="stylesheet" type="text/css" href="components/main.css">
+    <script src="components/script.js"></script>   
     <title>Page Not Found - 404</title>
     <style type="text/css">
         .error-container {
