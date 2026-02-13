@@ -65,14 +65,14 @@ h1 {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
-    align-items: flex-start; /* Add this */
+    align-items: flex-start;
     background-color: var(--primary-bg);
     padding: 1rem;
     border-radius: 12px;
     box-shadow: var(--shadow-md);
 }
 
-#menuBar > a {  /* Changed from #menuBar a to only target direct children */
+#menuBar > a {
     color: var(--text-primary);
     background-color: var(--primary-bg);
     min-width: 120px;
@@ -104,7 +104,7 @@ h1 {
 
 .dropdown {
     position: relative;
-    display: inline-block; /* Keep this */
+    display: inline-block;
 }
 
 .dropBtn {
@@ -163,7 +163,7 @@ h1 {
 
 .dropdown-content a:hover {
     background-color: var(--secondary-bg);
-    transform: none; /* Override the transform from parent */
+    transform: none;
 }
 
 .show {
@@ -213,6 +213,7 @@ h1 {
     text-align: left;
 }
 
+/* Form styling */
 form {
     max-width: 400px;
     background-color: var(--primary-bg);
@@ -229,6 +230,7 @@ form label {
 }
 
 form input[type="text"],
+form input[type="email"],
 form input[type="password"],
 form input[type="date"] {
     width: 100%;
@@ -242,14 +244,34 @@ form input[type="date"] {
 }
 
 form input[type="text"]:focus,
+form input[type="email"]:focus,
 form input[type="password"]:focus,
 form input[type="date"]:focus {
     outline: none;
     border-color: var(--accent-color);
 }
 
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
 form input[type="button"],
-form input[type="submit"] {
+form input[type="submit"],
+form button[type="submit"] {
     background-color: var(--accent-color);
     color: white;
     padding: 0.75rem 1.5rem;
@@ -263,10 +285,17 @@ form input[type="submit"] {
 }
 
 form input[type="button"]:hover,
-form input[type="submit"]:hover {
+form input[type="submit"]:hover,
+form button[type="submit"]:hover {
     background-color: var(--accent-hover);
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
+}
+
+form button[type="submit"]:disabled {
+    background-color: var(--text-secondary);
+    cursor: not-allowed;
+    transform: none;
 }
 
 #usernameInput,
@@ -279,6 +308,17 @@ form input[type="submit"]:hover {
     margin: 2rem auto;
 }
 
+#form-status {
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* List pages styling */
 .hwBack {
     max-width: 900px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -411,6 +451,53 @@ td {
     box-shadow: var(--shadow-md);
 }
 
+/* Blog post styling */
+.blog-post {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.blog-title {
+    font-size: 1.75rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+.blog-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.blog-date {
+    font-weight: 500;
+}
+
+.blog-category {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.blog-content {
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.blog-content p {
+    margin-bottom: 1rem;
+}
+
 /* Error page styling */
 .error-container {
     text-align: center;
@@ -483,88 +570,8 @@ td {
     th, td {
         padding: 0.75rem;
     }
-}
-
-/* Blog post styling */
-.blog-post {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.blog-post:last-child {
-    border-bottom: none;
-}
-
-.blog-title {
-    font-size: 1.75rem;
-    margin: 0 0 0.5rem 0;
-    color: var(--text-primary);
-    text-align: left;
-}
-
-.blog-meta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-}
-
-.blog-date {
-    font-weight: 500;
-}
-
-.blog-category {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-weight: 500;
-}
-
-.blog-content {
-    line-height: 1.8;
-    color: var(--text-primary);
-}
-
-.blog-content p {
-    margin-bottom: 1rem;
-}
-
-form button[type="submit"] {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-top: 0.5rem;
-}
-
-form button[type="submit"]:hover {
-    background-color: var(--accent-hover);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
-}
-
-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.2s ease;
-    box-sizing: border-box;
-    resize: vertical;
-}
-
-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
+    
+    form {
+        max-width: 100%;
+    }
 }
