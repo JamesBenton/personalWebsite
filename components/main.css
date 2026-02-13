@@ -116,9 +116,16 @@ h1 {
     transition: all 0.2s ease;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     min-width: 160px;
     background-color: var(--primary-bg);
     border-radius: 8px;
@@ -130,18 +137,16 @@ h1 {
 }
 
 .dropdown-content a {
+    display: block;
     margin: 0;
     border-radius: 0;
     border: none;
     border-bottom: 1px solid var(--border-color);
+    float: none;
 }
 
 .dropdown-content a:last-child {
     border-bottom: none;
-}
-
-.dropdown {
-    position: relative;
 }
 
 .show {
