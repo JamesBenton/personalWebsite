@@ -6,6 +6,16 @@
       "date": "2026-02-13",
       "category": "Web Development",
       "content": "Today I edited my personal website to include a blog section. Using json on the back end to handle the posts."
+    },
+    {
+      "id": 2,
+      "title": "Homebrew Weather Radar",
+      "date": "2026-02-21",
+      "category": "Homebrew",
+      "content": "I want to build my own radar to learn more about electromagnetic waves. It would probably help me learn more about space stuff."
     }
+    
   ]
+  
 }
+
