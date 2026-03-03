@@ -13,8 +13,14 @@
       "date": "2026-02-21",
       "category": "Homebrew",
       "content": "I want to build my own radar to learn more about electromagnetic waves. It would probably help me learn more about space stuff."
-    }
-    
+    },
+    {
+      "id": 3,
+      "title": "This week is stressful",
+      "date": "2026-02-21",
+      "category": "Personal",
+      "content": "Everything from work to school to home has been stressful over the last few days. I have a test on thursday, did not get to finish my homework last night because my family was being a lot, and I freaked out a little. I then needed to do a lot of dishes and some laundry. Feels like I am having to do way too much right now. Then, at work, I am having to deal with a machine that very much does not want to work correctly."
+    }        
   ]
   
 }
